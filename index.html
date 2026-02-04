@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradFit by Tetra | AI Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">GradFit <span class="tag">by Tetra</span></div>
+        <nav>
+            <a href="#builder">Builder</a>
+            <a href="#features">Features</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Stop Guessing. Start Working.</h1>
+        <p>The AI-powered career engine built for graduates.</p>
+        <button onclick="scrollToBuilder()">Build Resume Now</button>
+    </section>
+
+    <div class="container" id="builder">
+        <div class="editor">
+            <h3>1. Enter Details</h3>
+            <input type="text" id="fullName" placeholder="Full Name">
+            <input type="text" id="role" placeholder="Target Role (e.g. Data Analyst)">
+            <textarea id="summary" placeholder="Paste your professional summary..."></textarea>
+            
+            <h3>2. Experience</h3>
+            <textarea id="experience" placeholder="• Worked at Company X..."></textarea>
+            
+            <button class="ai-btn" onclick="simulateAI()">✨ AI Optimize (Demo)</button>
+        </div>
+
+        <div class="preview" id="resume-preview">
+            <div id="print-area">
+                <h2 id="prev-name">Your Name</h2>
+                <p id="prev-role">Target Role</p>
+                <hr>
+                <h4>Summary</h4>
+                <p id="prev-summary">Your summary will appear here.</p>
+                <h4>Experience</h4>
+                <p id="prev-experience">Your experience...</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="actions">
+        <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
